@@ -39,8 +39,7 @@ after_build:
   - dir
   - if [%buildPlatform%]==[x64] ( dir x64\Release\)
   - if [%buildPlatform%]==[x86] ( dir Release\PinNSieve.dll )
-  - dir C:\projects\
-  - mkdir C:\projects\tiny-tracer\install32_64\%artifactName%
+  - mkdir C:\projects\%projName%\install32_64\%artifactName%
   - if [%buildPlatform%]==[x64] ( cp x64\Release\PinNSieve.dll C:\projects\%projName%\install32_64\%artifactName%\PinNSieve64.dll )
   - if [%buildPlatform%]==[x86] ( cp Release\PinNSieve.dll C:\projects\%projName%\install32_64\%artifactName%\PinNSieve32.dll )
  
